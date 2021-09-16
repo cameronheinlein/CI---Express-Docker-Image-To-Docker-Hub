@@ -27,6 +27,6 @@ jobs:
         id: vars
         run: echo ::set-output name=tag::$(echo ${GITHUB_REF:10})
       - name: Build the tagged Docker image
-        run: docker build -t cameronheinlein/CI---Express-Docker-Image-To-Docker-Hub .
+        run: docker build -t cameronheinlein/express-docker-image .
       - name: Push the tagged Docker image
-        run: docker push cameronheinlein/CI---Express-Docker-Image-To-Docker-Hub
+        run: docker push cameronheinlein/express-docker-image
